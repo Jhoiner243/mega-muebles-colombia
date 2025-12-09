@@ -4,6 +4,7 @@ generator client {
 
 datasource db {
   provider = "postgresql" // Cambia a "mysql" o "sqlserver" si no usas Postgres
+  url = env("DATABASE_URL")
 }
 
 // --------------------------------------
@@ -127,6 +128,7 @@ model ProductVariant {
 model ProductImage {
   id            String   @id @default(uuid())
   url           String
+  publicId      String?  // Cloudinary public ID
   altText       String?
   isMain        Boolean  @default(false)
   
