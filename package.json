@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "dev": "nx run-many -t serve -p backend frontend --parallel=2",
+    "dev": "nx run-many -t serve -p backend frontend admin --parallel=3",
     "dev:all": "pnpm run docker:up && pnpm run dev",
     "dev:backend": "nx run backend:serve",
     "dev:frontend": "nx run frontend:dev",
